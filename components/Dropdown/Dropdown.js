@@ -6,10 +6,10 @@ class Dropdown {
 
     // Get the element with the ".dropdown-button" class found in the dropdown element (look at the HTML for context)
     this.button = this.element.querySelector('.dropdown-button');
-    console.log(this.button);
+    // console.log(this.button);
     // assign the reference to the ".dropdown-content" class found in the dropdown element
     this.content = this.element.querySelector('.dropdown-content');
-    console.log(this.content);
+    // console.log(this.content);
     // Add a click handler to the button reference and call the toggleContent method.
     this.button.addEventListener('click', () => this.toggleContent());
   }
@@ -24,3 +24,11 @@ class Dropdown {
 
 // Nothing to do here, just study what the code is doing and move on to the Dropdown class
 let dropdowns = document.querySelectorAll('.dropdown').forEach( dropdown => new Dropdown(dropdown));
+
+TweenMax.to('.anim',  2.5, {y:-20, ease: Bounce.easeOut, onComplete:myFunction});
+
+function myFunction() {
+  TweenMax.to('.anim',  2.5, {y:20, ease: Bounce.easeOut});
+}
+
+TweenMax.from('.anim2', 2.5, {opacity: 0});
