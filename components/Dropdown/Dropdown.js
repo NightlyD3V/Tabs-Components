@@ -31,4 +31,4 @@ function myFunction() {
   TweenMax.to('.anim',  2.5, {y:20, ease: Bounce.easeOut});
 }
 
-TweenMax.from('.anim2', 2.5, {opacity: 0});
+TweenMax.from('.anim2', 3, {opacity: 0});
